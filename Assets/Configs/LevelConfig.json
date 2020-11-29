@@ -1,0 +1,22 @@
+{
+    "_chapter": 
+    {
+      "_minNumber": 0,
+      "_maxNumber": 3,
+      "_numberDelta": 2,
+      "_levels": 5,
+      "_bossTimeLimitSec": 45
+    },
+  
+    "_playerLives": 3,
+    "_enemyLives": 5,
+    "_playerDamage": 1,
+    "_enemyDamage": 1,
+    
+    "_options": 
+    {
+      "_totalOptions": 4,
+      "_optionDelta": 3
+    }
+  
+}

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="857770e4-ba60-4229-912b-12d0f2b66a46" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/AbstractWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataLoader/Installers/DataLoaderInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/TurnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Installers/InitializationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Interfaces/IConfigInitialization.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelConfigProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataLoader/Interfaces/IDataLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Operations/Interfaces/IOperationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Install/MonoInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigOptionData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DataLoader/Controllers/DataLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/WindowController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Operations/Enums/EOperationType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/99258562-0D64-4271-98DD-F3A0E1467733/37/040639d9/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigChapterData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Configs/LevelConfig.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Interfaces/IInitializeMediator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Enums/EWindowType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Operations/Controllers/OperationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/StartWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Controller/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Models/EnemyModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/IGameLauncher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/DefeatWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Controllers/InitializeMediator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/AbstractWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Installers/LevelInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Packages/manifest.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Models/PlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/IGameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/StartWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/BattleWindow.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ITurnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelConfigProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/WindowHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/GameLauncher.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/IWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/StartWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/IGameLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/WindowController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigChapterData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigOptionData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/AbstractWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/StartWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/AbstractWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Models.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Enums/EWindowType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/WindowHandler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/DefeatWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Models/EnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Models/PlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Installers/PlayerInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/GameLauncher.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Operations/Enums/EOperationType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Operations/Interfaces/IOperationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Operations/Controllers/OperationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ITurnController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Controller/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/BattleWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Configs/LevelConfig.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/TurnController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelConfigProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelConfigProvider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/IGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Installers/LevelInstaller.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kxIcUF5hjFLDkGrlcnrwyKIQo0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="-1113" y="241" key="RiderGenerateDialog" timestamp="1606664360446">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1113" y="241" key="RiderGenerateDialog/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606664360446" />
+    <state x="-1306" y="316" width="732" height="486" key="find.popup" timestamp="1606663951850">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1306" y="316" width="732" height="486" key="find.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606663951850" />
+    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606665591293">
+      <screen x="-1920" y="23" width="1920" height="1057" />
+    </state>
+    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606665591293" />
+  </component>
+</project>
