@@ -24,6 +24,7 @@ namespace Player
         
         public void ReceiveDamage(int damage)
         {
+            Debug.Log("player receives damage " + damage);
             _playerModel.AddLives(-damage);
         }
 

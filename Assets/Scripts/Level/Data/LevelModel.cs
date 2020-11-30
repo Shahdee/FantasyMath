@@ -1,13 +1,17 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Operations;
 using Operations.Enums;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Level
 {
     public class LevelModel : ILevelModel
     {
+        public event Action OnEquationPrepared;
+        
         private readonly IOperationProvider _operationProvider;
         public int CurrentChapter => _currentChapter;
         public int CurrentLevelInChapter => _currentLevel;
@@ -64,7 +68,12 @@ namespace Level
 
         public int GetTotalLevels() => _configChapterData.Levels;
 
-        
+        public void PrepareEquation()
+        {
+            UpdateOperation();
+            OnEquationPrepared?.Invoke();
+        }
+
         private void UpdateOperationBase()
         {
             _minRandomNumber = _configChapterData.MinNumber + _currentChapter * _configChapterData.NumberDelta; 
@@ -72,7 +81,7 @@ namespace Level
 
             Debug.Log("_minRandomNumber " + _minRandomNumber + " / _maxRandomNumber " + _maxRandomNumber);
         }
-
+        
         private void UpdateOperation()
         {
             _firstOperand = Random.Range(_minRandomNumber, _maxRandomNumber + 1);

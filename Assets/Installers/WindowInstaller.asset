@@ -24,3 +24,7 @@ MonoBehaviour:
     type: 3}
   _chapterWindowView: {fileID: 3122158164716573376, guid: 0fb4e5f7919374a019e49c34626eb3b6,
     type: 3}
+  _playerLife: {fileID: 5548265140095685921, guid: 0343b5ce9b04444e69c02513075c8060,
+    type: 3}
+  _resultButton: {fileID: 1098164769978134845, guid: 1ed1c4426db354a9f97c6ffa1785fa6d,
+    type: 3}

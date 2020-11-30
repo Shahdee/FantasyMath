@@ -635,6 +635,8 @@
               <e p="AbstractWindow.cs" t="Include" />
               <e p="BattleWindow.cs" t="Include" />
               <e p="DefeatWindow.cs" t="Include" />
+              <e p="PlayerLifeFactory.cs" t="Include" />
+              <e p="ResultButtonFactory.cs" t="Include" />
               <e p="StartWindow.cs" t="Include" />
               <e p="WindowController.cs" t="Include" />
               <e p="WindowHandler.cs" t="Include" />
@@ -646,6 +648,10 @@
               <e p="WindowInstaller.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
+              <e p="IPlayerLifeFactory.cs" t="Include" />
+              <e p="IPlayerLifeView.cs" t="Include" />
+              <e p="IResultButtonFactory.cs" t="Include" />
+              <e p="IResultButtonView.cs" t="Include" />
               <e p="IWindow.cs" t="Include" />
               <e p="IWindowController.cs" t="Include" />
               <e p="IWindowHandler.cs" t="Include" />
@@ -656,7 +662,12 @@
               <e p="BattleWindowView.cs" t="Include" />
               <e p="ChapterWindowView.cs" t="Include" />
               <e p="DefeatWindowView.cs" t="Include" />
+              <e p="EquationView.cs" t="Include" />
               <e p="PauseWindowView.cs" t="Include" />
+              <e p="PlayerHpView.cs" t="Include" />
+              <e p="PlayerLifeView.cs" t="Include" />
+              <e p="ResultButtonView.cs" t="Include" />
+              <e p="ResultGroupView.cs" t="Include" />
               <e p="SettingsWindowView.cs" t="Include" />
               <e p="StartWindowView.cs" t="Include" />
             </e>

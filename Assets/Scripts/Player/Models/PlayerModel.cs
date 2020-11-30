@@ -4,11 +4,14 @@ namespace Player
 {
     public class PlayerModel : IPlayerModel
     {
-        public event Action OnPlayerDied;
+        public event Action OnDied;
+        public event Action<int> OnLifeChange;
         
         public int Lives => _lives;
+        public int TotalLives => _totalLives;
 
         private int _lives;
+        private int _totalLives;
 
         public PlayerModel()
         {
@@ -17,7 +20,9 @@ namespace Player
 
         public void SetLives(int lives)
         {
-            _lives = lives;
+            _totalLives = _lives = lives;
+            
+            OnLifeChange?.Invoke(_lives);
         }
 
         public void AddLives(int lives)
@@ -25,8 +30,10 @@ namespace Player
             _lives += lives;
             _lives = Math.Max(0, _lives);
             
+            OnLifeChange?.Invoke(_lives);
+            
             if (_lives == 0)
-                OnPlayerDied?.Invoke();
+                OnDied?.Invoke();
         }
     }
 }

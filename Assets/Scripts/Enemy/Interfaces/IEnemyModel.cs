@@ -4,9 +4,13 @@ namespace Enemy
 {
     public interface IEnemyModel
     {
-        event Action OnEnemyDied;
+        int TotalLives { get; }
+        event Action OnDied;
+        event Action<int> OnLifeChange;
         
         void SetLives(int lives);
         void AddLives(int lives);
+
+        bool IsAlive();
     }
 }

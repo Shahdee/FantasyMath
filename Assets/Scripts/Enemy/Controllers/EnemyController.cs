@@ -1,10 +1,13 @@
 using System;
 using Level;
+using UnityEngine;
 
 namespace Enemy
 {
     public class EnemyController : IEnemyController, IDisposable
     {
+        public event Action OnEnemyDamage;
+        
         private readonly IEnemyModel _enemyModel;
         private readonly ILevelModel _levelModel;
         private readonly IGameController _gameController;
@@ -28,7 +31,10 @@ namespace Enemy
 
         public void ReceiveDamage(int damage)
         {
+            Debug.Log("enemy receives damage " + damage);
             _enemyModel.AddLives(-damage);
+
+            OnEnemyDamage?.Invoke();
         }
 
         private void LevelStart()

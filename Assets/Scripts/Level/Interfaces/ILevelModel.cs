@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Operations.Enums;
 
@@ -5,6 +6,8 @@ namespace Level
 {
     public interface ILevelModel
     {
+        event Action OnEquationPrepared;
+        
         int CurrentChapter { get; }
         int CurrentLevelInChapter { get; }
         int FirstOperand { get; }
@@ -19,5 +22,7 @@ namespace Level
         bool IsBossLevel();
 
         int GetTotalLevels();
+
+        void PrepareEquation();
     }
 }
