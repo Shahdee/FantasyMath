@@ -28,7 +28,7 @@ namespace Enemy
 
         public void ReceiveDamage(int damage)
         {
-            _enemyModel.AddLives(damage);
+            _enemyModel.AddLives(-damage);
         }
 
         private void LevelStart()

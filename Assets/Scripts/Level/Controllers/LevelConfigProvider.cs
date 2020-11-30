@@ -8,7 +8,7 @@ namespace Level
     {
         public event Action OnDone;
         
-        private const string LevelConfigFileName = "LevelConfig";
+        private const string LevelConfigFileName = "LevelConfig.json";
         
         private readonly IDataLoader _dataLoader;
 

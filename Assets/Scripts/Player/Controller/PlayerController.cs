@@ -1,5 +1,6 @@
 using System;
 using Level;
+using UnityEngine;
 
 namespace Player
 {
@@ -23,11 +24,12 @@ namespace Player
         
         public void ReceiveDamage(int damage)
         {
-            _playerModel.AddLives(damage);
+            _playerModel.AddLives(-damage);
         }
 
         private void GameStart()
         {
+            Debug.Log("start");
             _playerModel.SetLives(_levelConfigProvider.GetPlayerLives()) ;
         }
         

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b46f18a4d88342ce9d3b1358f8241fa, type: 3}
+  m_Name: WindowInstaller
+  m_EditorClassIdentifier: 
+  _startWindowView: {fileID: 1537316913706454127, guid: 3039cc152b25746879e5d3be23f5a42c,
+    type: 3}
+  _battleWindowView: {fileID: 4664506632077419098, guid: b0a209ea1921c43e3855367880872b9a,
+    type: 3}
+  _defeatWindowView: {fileID: -8414471327283577367, guid: 54dd525002fc140fcaf5015fce8c50ba,
+    type: 3}
+  _pauseWindowView: {fileID: 8554599131716107885, guid: f0dd3134fecde4855a66369537584b74,
+    type: 3}
+  _settingsWindowView: {fileID: 3669821057042427824, guid: b7238f1ddccb54850885e9694f07987a,
+    type: 3}
+  _chapterWindowView: {fileID: 3122158164716573376, guid: 0fb4e5f7919374a019e49c34626eb3b6,
+    type: 3}

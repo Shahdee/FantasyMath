@@ -1,7 +1,16 @@
-namespace Enemy.Installers
+using UnityEngine;
+using Zenject;
+
+namespace Enemy
 {
-    public class EnemyInstaller 
+    [CreateAssetMenu(fileName = "EnemyInstaller",  menuName = "SO/Installers/EnemyInstaller")]
+    public class EnemyInstaller : ScriptableObjectInstaller
     {
-        
+        public override void InstallBindings()
+        {
+            Container.BindInterfacesTo<EnemyController>().AsSingle();
+            Container.BindInterfacesTo<EnemyFactory>().AsSingle();
+            Container.BindInterfacesTo<EnemyModel>().AsSingle();
+        }
     }
 }

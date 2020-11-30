@@ -9,6 +9,8 @@ namespace Zenject
         readonly DiContainer _container;
         readonly InjectContext _context;
 
+        public bool HasValue => _hasValue;
+
         bool _hasValue;
         T _value;
 

@@ -1,4 +1,4 @@
-namespace UI.Enums
+namespace UI
 {
     public enum EWindowType
     {

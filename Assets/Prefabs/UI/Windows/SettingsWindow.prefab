@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3296094164706786646}
   - component: {fileID: 3296094164706786647}
   - component: {fileID: 3296094164706786644}
+  - component: {fileID: 3669821057042427824}
   m_Layer: 5
   m_Name: SettingsWindow
   m_TagString: Untagged
@@ -98,3 +99,16 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3669821057042427824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3296094164706786642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bf84ac66ae14e10862104387ef21c0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _canvas: {fileID: 3296094164706786646}

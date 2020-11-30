@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Initialization
 {
-    public class InitializeMediator : Zenject.IInitializable, IDisposable
+    public class InitializeMediator : Zenject.IInitializable, IInitializeMediator, IDisposable
     {
         public event Action OnDone;
         
@@ -21,6 +22,8 @@ namespace Initialization
         
         public void Initialize()
         {
+            Debug.LogError("init here " + _configInitializables.Count);
+            
             _waiting = _configInitializables.Count;
             
             foreach (var configInitializable in _configInitializables)

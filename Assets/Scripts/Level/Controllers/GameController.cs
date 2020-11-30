@@ -1,6 +1,6 @@
 ﻿using System;
 using Enemy;
-using Operations;
+using UnityEngine;
 
 namespace Level
 {
@@ -34,6 +34,7 @@ namespace Level
 
         public void StartGame()
         {
+            Debug.LogError("start game >>>< ");
             var chapter = 0;
             var level = 0;
             

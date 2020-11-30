@@ -1,6 +1,5 @@
-using System;
 using Level;
-using UI.Enums;
+using UnityEngine;
 
 namespace UI
 {
@@ -14,11 +13,11 @@ namespace UI
         {
             _gameController = gameController;
             _windowController = windowController;
+            
+            Debug.LogError("window handler const");
 
-            _gameController.OnGameStart += () => _windowController.OpenWindow(EWindowType.Battle);
+            _gameController.OnGameStart += () => _windowController.OpenWindowAndCloseOthers(EWindowType.Battle);
             _gameController.OnGameOver += () => _windowController.OpenWindow(EWindowType.Defeat);
         }
-        
-        
     }
 }
