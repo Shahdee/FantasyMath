@@ -7,7 +7,7 @@ namespace Operations
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesTo<OperationController>().AsSingle();
+            Container.BindInterfacesTo<OperationProvider>().AsSingle();
         }
     }
 }

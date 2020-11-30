@@ -38,8 +38,6 @@ namespace UI
 
         private void StartGame()
         {
-            Debug.LogError("start game ");
-            
             _gameLauncher.LaunchGame();
         }
 

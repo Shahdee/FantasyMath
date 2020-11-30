@@ -29,7 +29,6 @@ namespace Player
 
         private void GameStart()
         {
-            Debug.Log("start");
             _playerModel.SetLives(_levelConfigProvider.GetPlayerLives()) ;
         }
         

@@ -14,8 +14,6 @@ namespace UI
             _gameController = gameController;
             _windowController = windowController;
             
-            Debug.LogError("window handler const");
-
             _gameController.OnGameStart += () => _windowController.OpenWindowAndCloseOthers(EWindowType.Battle);
             _gameController.OnGameOver += () => _windowController.OpenWindow(EWindowType.Defeat);
         }

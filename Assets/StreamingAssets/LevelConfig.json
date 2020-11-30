@@ -1,9 +1,11 @@
 {
     "_chapter": 
     {
-      "_minNumber": 0,
-      "_maxNumber": 3,
-      "_numberDelta": 2,
+      "_minRandomNumber": 0,
+      "_maxRandomNumber": 3,
+      "_randomNumberDelta": 2,
+      "_wrongResultDelta": 3,
+      "_totalNumberOfResults": 4,
       "_levels": 5,
       "_bossTimeLimitSec": 45
     },

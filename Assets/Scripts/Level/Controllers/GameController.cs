@@ -34,7 +34,6 @@ namespace Level
 
         public void StartGame()
         {
-            Debug.LogError("start game >>>< ");
             var chapter = 0;
             var level = 0;
             
@@ -45,8 +44,7 @@ namespace Level
 
         private void StartLevel(int chapter, int level)
         {
-            _levelModel.CurrentChapter = chapter;
-            _levelModel.CurrentLevelInChapter = level;
+            _levelModel.SetLevelParams(chapter, level);
             
             OnLevelStart?.Invoke();
         }

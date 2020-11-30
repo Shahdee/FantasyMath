@@ -12,13 +12,13 @@ namespace Level
         private readonly IEnemyController _enemyController;
         private readonly IPlayerController _playerController;
         private readonly ILevelConfigProvider _levelConfigProvider;
-        private readonly IOperationController _operationController;
+        private readonly IOperationProvider _operationController;
 
         public TurnController(ILevelModel levelModel, 
                                 IEnemyController enemyController,
                                 IPlayerController playerController,
                                 ILevelConfigProvider levelConfigProvider,
-                                IOperationController operationController)
+                                IOperationProvider operationController)
         {
             _levelModel = levelModel;
             _enemyController = enemyController;
@@ -27,8 +27,12 @@ namespace Level
             _operationController = operationController;
         }
 
-        public void SendResults(int operand1, int operand2, EOperationType operationType, int result)
+        public void SendResults(int result)
         {
+            var operand1 = _levelModel.FirstOperand;
+            var operand2 = _levelModel.SecondOperand;
+            var operationType = _levelModel.OperationType;
+            
             if (_operationController.CheckOperation(operand1, operand2, operationType, result))
             {
                 var enemyDamage = _levelConfigProvider.GetEnemyDamage();
