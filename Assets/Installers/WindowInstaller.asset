@@ -30,3 +30,7 @@ MonoBehaviour:
     type: 3}
   _screenBlockerView: {fileID: 7375183031529129860, guid: 010bf35269a184c138d89225f9108800,
     type: 3}
+  _normalEnemy: {fileID: 7859449113018546024, guid: 73df51d2b2f164db9b3a3fa7d509283a,
+    type: 3}
+  _bossEnemy: {fileID: 7298842954276319569, guid: cb4e2f87d25f84a87bcd22e703c9f166,
+    type: 3}

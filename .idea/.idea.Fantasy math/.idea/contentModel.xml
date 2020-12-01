@@ -536,7 +536,6 @@
           <e p="Enemy" t="Include">
             <e p="Controllers" t="Include">
               <e p="EnemyController.cs" t="Include" />
-              <e p="EnemyFactory.cs" t="Include" />
             </e>
             <e p="Enums" t="Include">
               <e p="EEnemyType.cs" t="Include" />
@@ -546,15 +545,10 @@
             </e>
             <e p="Interfaces" t="Include">
               <e p="IEnemyController.cs" t="Include" />
-              <e p="IEnemyFactory.cs" t="Include" />
               <e p="IEnemyModel.cs" t="Include" />
-              <e p="IEnemyView.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
               <e p="EnemyModel.cs" t="Include" />
-            </e>
-            <e p="Views" t="Include">
-              <e p="EnemyView.cs" t="Include" />
             </e>
           </e>
           <e p="Helpers" t="Include">
@@ -645,6 +639,7 @@
               <e p="AbstractWindow.cs" t="Include" />
               <e p="BattleWindow.cs" t="Include" />
               <e p="DefeatWindow.cs" t="Include" />
+              <e p="EnemyFactory.cs" t="Include" />
               <e p="PlayerLifeFactory.cs" t="Include" />
               <e p="ResultButtonFactory.cs" t="Include" />
               <e p="ScreenBlocker.cs" t="Include" />
@@ -660,6 +655,8 @@
               <e p="WindowInstaller.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
+              <e p="IEnemyFactory.cs" t="Include" />
+              <e p="IEnemyView.cs" t="Include" />
               <e p="IPlayerLifeFactory.cs" t="Include" />
               <e p="IPlayerLifeView.cs" t="Include" />
               <e p="IResultButtonFactory.cs" t="Include" />
@@ -676,6 +673,8 @@
               <e p="ChapterWindowView.cs" t="Include" />
               <e p="DefeatWindowView.cs" t="Include" />
               <e p="EnemyBarView.cs" t="Include" />
+              <e p="EnemyPanelView.cs" t="Include" />
+              <e p="EnemyView.cs" t="Include" />
               <e p="EquationView.cs" t="Include" />
               <e p="LevelInfoView.cs" t="Include" />
               <e p="PauseWindowView.cs" t="Include" />

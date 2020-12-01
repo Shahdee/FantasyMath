@@ -10,6 +10,9 @@ namespace UI
         public event Action<int, int> OnResultSelect;
         public List<IPlayerLifeView> Lives => _playerHp.Lives;
         public List<IResultButtonView> ResultButtons => _resultGroupView.Results;
+        public Transform EnemyParent => _enemyParent;
+
+        [SerializeField] private Transform _enemyParent;
 
         [SerializeField] private LevelInfoView _levelInfo;
         [SerializeField] private EnemyBarView _enemyBar;
@@ -45,19 +48,6 @@ namespace UI
         public void SetTime(float current, float total) => _enemyBar.SetTime(current, total);
 
         public void SetLevelInfo(int chapter, int level) => _levelInfo.SetLevelInfo(chapter, level);
-
-        // settings button 
-
-        // enemy hp 
-        // timer 
-
-        // Normal level 
-        // chapter-level
-        // enemy hp 
-        // hp
-        // operation
-        // options 
-        // my hp 
-
+        
     }
 }

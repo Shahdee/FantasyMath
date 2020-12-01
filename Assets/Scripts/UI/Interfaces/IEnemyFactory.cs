@@ -1,4 +1,4 @@
-namespace Enemy
+namespace UI
 {
     public interface IEnemyFactory
     {

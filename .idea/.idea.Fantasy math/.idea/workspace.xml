@@ -2,22 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="857770e4-ba60-4229-912b-12d0f2b66a46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/ScreenBlocker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/ScreenBlocker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IScreenBlocker.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IScreenBlocker.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ScreenBlockerView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ScreenBlockerView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyPanelView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyPanelView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fantasy math/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fantasy math/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Fantasy math/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fantasy math/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Installers/WindowInstaller.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Installers/WindowInstaller.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyBasic_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyBasic_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyBoss_1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyBoss_1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Windows/BattleWindow.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Windows/BattleWindow.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/EnemyFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/EnemyFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyFactory.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Views.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Views/EnemyView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Views/EnemyView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/BattleWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/BattleWindow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IResultButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IResultButtonView.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultButtonView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultButtonView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultGroupView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultGroupView.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +44,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Enums/EEnemyType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/TurnController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyPanelView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindow.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Interfaces/IConfigInitialization.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelConfigProvider.cs" root0="FORCE_HIGHLIGHTING" />
@@ -45,12 +57,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Data/LevelConfigChapterData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Interfaces/IInitializeMediator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Enums/EWindowType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Installers/HelperInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Operations/Installers/OperationInstaller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Interfaces/ICoroutineManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/DefeatWindow.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Initialization/Controllers/InitializeMediator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultButtonView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Controllers/CoroutineManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,7 +111,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Controllers/ResultButtonFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Views/EnemyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Operations/Controllers/OperationProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Main/DiContainer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/StartWindowView.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,7 +124,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/PlayerLifeView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Views/PlayerHpView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IWindowView.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Models/PlayerModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Zenject/Source/Injection/LazyInject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -126,11 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/PlayerHp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Interfaces/IPlayerModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Models/PlayerModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IPlayerLifeView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/PlayerHpView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/PlayerLifeView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/ResultButtonFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IResultButtonFactory.cs" />
@@ -140,7 +147,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/IEnemyView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Enums/EEnemyType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Models/EnemyModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/WindowController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyModel.cs" />
@@ -149,8 +155,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Interfaces/IEnemyView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Views/EnemyView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/LevelInfoView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/Installers/HelperInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/Views/MonoManagerView.cs" />
@@ -159,7 +163,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelModel.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyBarView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Helpers/Controllers/MonoManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/StreamingAssets/LevelConfig.json" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/DefeatWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/DefeatWindow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level/Interfaces/ILevelController.cs" />
@@ -167,16 +170,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Level/Controllers/LevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Initialization/Controllers/InitializeMediator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Enums/EResultHighlightType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IResultButtonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/ResultGroupView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/ScreenBlocker.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IScreenBlocker.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/ScreenBlockerView.cs" />
+        <option value="$PROJECT_DIR$/Assets/StreamingAssets/LevelConfig.json" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Models/EnemyModel.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyPanelView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/BattleWindowView.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/BattleWindow.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Installers/EnemyInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Installers/WindowInstaller.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Controllers/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Views/EnemyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Interfaces/IEnemyView.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemy/Controllers/EnemyController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Views/EnemyView.cs" />
       </list>
     </option>
   </component>
@@ -234,9 +246,9 @@
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
     <state x="-1306" y="316" width="732" height="486" key="find.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606809460781" />
-    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606830701570">
+    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup" timestamp="1606836453203">
       <screen x="-1920" y="23" width="1920" height="1057" />
     </state>
-    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606830701570" />
+    <state x="-1277" y="265" width="672" height="678" key="search.everywhere.popup/-1920.23.1920.1057/0.23.1680.1027@-1920.23.1920.1057" timestamp="1606836453203" />
   </component>
 </project>

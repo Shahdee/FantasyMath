@@ -23,20 +23,22 @@ namespace UI
         private readonly IPlayerLifeFactory _playerLifeFactory;
         private readonly IPlayerModel _playerModel;
         private readonly ILevelModel _levelModel;
+        private readonly IEnemyFactory _enemyFactory;
         private readonly IOperationProvider _operationProvider;
         private readonly IResultButtonFactory _resultButtonFactory;
         private readonly ICoroutineManager _coroutineManager;
-        private readonly IScreenBlocker _screenBlocker;
         private readonly IEnemyModel _enemyModel;
+        
+        private IEnemyView _enemyView;
 
         public BattleWindow(LazyInject<BattleWindowView> view,
                             IPlayerLifeFactory playerLifeFactory,
                             IPlayerModel playerModel,
                             ILevelModel levelModel,
+                            IEnemyFactory enemyFactory,
                             IOperationProvider operationProvider,
                             IResultButtonFactory resultButtonFactory,
                             ICoroutineManager coroutineManager,
-                            IScreenBlocker screenBlocker,
                             IEnemyModel enemyModel,
                             ILevelController gameController,
                             ITurnController turnController)
@@ -47,10 +49,10 @@ namespace UI
             _playerLifeFactory = playerLifeFactory;
             _playerModel = playerModel;
             _levelModel = levelModel;
+            _enemyFactory = enemyFactory;
             _operationProvider = operationProvider;
             _resultButtonFactory = resultButtonFactory;
             _coroutineManager = coroutineManager;
-            _screenBlocker = screenBlocker;
             _enemyModel = enemyModel;
 
             _gameController.OnLevelStart += LevelStart;
@@ -88,6 +90,24 @@ namespace UI
             UpdatePlayerLives();
             UpdateEnemyBar();
             UpdateEquation();
+
+            CreateEnemy();
+        }
+        
+        private void CreateEnemy()
+        {
+            RemoveEnemy();
+            _enemyView = _enemyFactory.CreateEnemy(_levelModel.IsBossLevel());
+            _enemyView.SetParent(_view.Value.EnemyParent);
+        }
+        
+        private void RemoveEnemy()
+        {
+            if (_enemyView != null)
+            {
+                _enemyView.DestroyEnemy();
+                _enemyView = null;
+            }
         }
 
         private void UpdatePlayerLives()

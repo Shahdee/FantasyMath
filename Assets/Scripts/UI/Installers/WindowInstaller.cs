@@ -16,6 +16,8 @@ namespace UI
         [SerializeField] private PlayerLifeView _playerLife;
         [SerializeField] private ResultButtonView _resultButton;
         [SerializeField] private ScreenBlockerView _screenBlockerView;
+        [SerializeField] private EnemyView _normalEnemy;
+        [SerializeField] private EnemyView _bossEnemy;
 
         public override void InstallBindings()
         {
@@ -33,6 +35,7 @@ namespace UI
             Container.BindInterfacesTo<WindowHandler>().AsSingle().NonLazy();
             
             Container.BindInterfacesTo<WindowController>().AsSingle();
+            Container.BindInterfacesTo<EnemyFactory>().AsSingle().WithArguments(_normalEnemy, _bossEnemy);
             Container.BindInterfacesTo<ScreenBlocker>().AsSingle();
             Container.BindInterfacesTo<StartWindow>().AsSingle();
             Container.BindInterfacesTo<BattleWindow>().AsSingle();

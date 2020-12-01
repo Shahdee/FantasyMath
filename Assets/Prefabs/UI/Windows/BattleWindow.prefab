@@ -1286,6 +1286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvas: {fileID: 4664506632077419101}
+  _enemyParent: {fileID: 2017861936838907853}
   _levelInfo: {fileID: 5258278014345613302}
   _enemyBar: {fileID: 6913456660950750616}
   _playerHp: {fileID: 1163548933404115206}
