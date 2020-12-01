@@ -2,7 +2,7 @@ using System;
 
 namespace Level
 {
-    public interface IGameController
+    public interface ILevelController
     {
         event Action OnGameStart;
         event Action OnLevelStart;

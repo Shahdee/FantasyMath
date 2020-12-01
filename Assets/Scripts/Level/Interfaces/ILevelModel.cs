@@ -13,7 +13,7 @@ namespace Level
         int FirstOperand { get; }
         int SecondOperand { get; }
         EOperationType OperationType { get; }
-        HashSet<int> Results { get; }
+        IEnumerable<int> Results { get; }
 
         void SetChapterData(LevelConfigChapterData configChapterData);
 

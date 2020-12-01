@@ -6,5 +6,10 @@ namespace Enemy
         {
             
         }
+
+        // public IEnemyView CreateEnemy()
+        // {
+        //     return new EnemyView();
+        // }
     }
 }

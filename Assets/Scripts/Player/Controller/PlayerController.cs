@@ -8,11 +8,11 @@ namespace Player
     {
         private readonly IPlayerModel _playerModel;
         private readonly ILevelConfigProvider _levelConfigProvider;
-        private readonly IGameController _gameController;
+        private readonly ILevelController _gameController;
 
         public PlayerController(IPlayerModel playerModel,
                                 ILevelConfigProvider levelConfigProvider,
-                                IGameController gameController)
+                                ILevelController gameController)
         {
             _playerModel = playerModel;
             _levelConfigProvider = levelConfigProvider;

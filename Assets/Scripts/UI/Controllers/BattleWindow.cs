@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Enemy;
 using Level;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace UI
     {
         public override EWindowType WindowType => EWindowType.Battle;
         
-        private readonly IGameController _gameController;
+        private readonly ILevelController _gameController;
         private readonly ITurnController _turnController;
         private readonly LazyInject<BattleWindowView> _view;
         
@@ -26,7 +27,7 @@ namespace UI
                             ILevelModel levelModel,
                             IResultButtonFactory resultButtonFactory,
                             IEnemyModel enemyModel,
-                            IGameController gameController,
+                            ILevelController gameController,
                             ITurnController turnController)
         {
             _gameController = gameController;
@@ -66,7 +67,7 @@ namespace UI
         {
             if (!_view.HasValue) return;
             
-            UpdateEnemyLives();
+            UpdateEnemyBar();
             UpdateEquation();
         }
 
@@ -75,7 +76,7 @@ namespace UI
             if (!_view.HasValue) return;
 
             UpdatePlayerLives();
-            UpdateEnemyLives();
+            UpdateEnemyBar();
             UpdateEquation();
         }
 
@@ -95,9 +96,24 @@ namespace UI
             _view.Value.SetLives(totalPlayerLives, lives);
         }
 
-        private void UpdateEnemyLives()
+        private void UpdateEnemyBar()
         {
+            UpdateTimer();
+            UpdateEnemyHealth();
+        }
+
+        private void UpdateTimer()
+        {
+            var showTimer = _levelModel.IsBossLevel();
+            _view.Value.ShowTimer(showTimer);
+        }
+
+        private void UpdateEnemyHealth()
+        {
+            var total = _enemyModel.TotalLives;
+            var lives = _enemyModel.Lives;
             
+            _view.Value.SetEnemyLives(lives, total);
         }
 
         private void UpdateEquation()
@@ -111,7 +127,7 @@ namespace UI
         {
             var results = _levelModel.Results;
             
-            var addResults = Mathf.Max(0,results.Count - _view.Value.ResultButtons.Count);
+            var addResults = Mathf.Max(0,results.Count() - _view.Value.ResultButtons.Count);
             
             for (int i = 0; i < addResults; i++)
             {
@@ -129,7 +145,7 @@ namespace UI
         
         private void EnemyLifeChange(int lives)
         {
-            UpdateEnemyLives();
+            UpdateEnemyHealth();
         }
 
         private void ResultSelected(int result)

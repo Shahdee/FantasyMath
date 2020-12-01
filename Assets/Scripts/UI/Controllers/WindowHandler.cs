@@ -5,10 +5,10 @@ namespace UI
 {
     public class WindowHandler : IWindowHandler
     {
-        private readonly IGameController _gameController;
+        private readonly ILevelController _gameController;
         private readonly IWindowController _windowController;
 
-        public WindowHandler(IGameController gameController,
+        public WindowHandler(ILevelController gameController,
                             IWindowController windowController)
         {
             _gameController = gameController;

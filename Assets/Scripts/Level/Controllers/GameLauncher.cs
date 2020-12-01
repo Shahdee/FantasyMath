@@ -9,13 +9,13 @@ namespace Level
         private readonly ILevelConfigProvider _configProvider;
         private readonly IInitializeMediator _initializeMediator;
         private readonly ILevelModel _levelModel;
-        private readonly IGameController _gameController;
+        private readonly ILevelController _gameController;
 
 
         public GameLauncher(ILevelConfigProvider configProvider,
                             IInitializeMediator initializeMediator,
                             ILevelModel levelModel,
-                            IGameController gameController)
+                            ILevelController gameController)
         {
             _configProvider = configProvider;
             _initializeMediator = initializeMediator;

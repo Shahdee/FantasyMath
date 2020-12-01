@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Operations;
@@ -18,7 +19,7 @@ namespace Level
         public int FirstOperand => _firstOperand;
         public int SecondOperand => _secondOperand;
         public EOperationType OperationType => _currentOperatiom;
-        public HashSet<int> Results => _results;
+        public IEnumerable<int> Results => _results;
         
 
         private readonly LevelData _levelData;
@@ -33,7 +34,7 @@ namespace Level
         private int _firstOperand = -1;
         private int _secondOperand = -1;
         private int _operationResult = -1;
-        private HashSet<int> _results;
+        private IEnumerable<int> _results;
         
         private EOperationType _currentOperatiom = EOperationType.Summ;
 
@@ -88,21 +89,15 @@ namespace Level
             _secondOperand = Random.Range(_minRandomNumber, _maxRandomNumber + 1);
             _operationResult = _operationProvider.GetCorrectResult(_firstOperand, _secondOperand, _currentOperatiom);
             
-            Debug.Log("_firstOperand " + _firstOperand + " + _secondOperand " + _secondOperand + " => " + _operationResult);
+            Debug.Log(  _firstOperand + " + " + _secondOperand + " = " + _operationResult);
 
-            _results = _operationProvider.GetWrongResults(_firstOperand,
+            var results = _operationProvider.GetWrongResults(_firstOperand,
                                                         _secondOperand,
                                                                 _configChapterData.WrongResultDelta,
                                                                 _currentOperatiom,
                                                             _configChapterData.TotalNumberOfResults - 1);
-
-            _results.Add(_operationResult);
-            _results.OrderBy(r => Random.value);
-
-            foreach (var result in _results)
-            {
-                Debug.LogError("result " + result);
-            }
+            results.Add(_operationResult);
+            _results = results.OrderBy(r => Random.value);
         }
     }
 }

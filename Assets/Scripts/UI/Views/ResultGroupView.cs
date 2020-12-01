@@ -20,7 +20,7 @@ namespace UI
             button.OnBtnClick += ResultButtonClick;
         }
 
-        public void SetResults(HashSet<int> results)
+        public void SetResults(IEnumerable<int> results)
         {
             var count = 0;
             foreach (var result in results)

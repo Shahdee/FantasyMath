@@ -3,7 +3,7 @@ using Enemy;
 
 namespace Level
 {
-    public class GameController : IGameController
+    public class LevelController : ILevelController
     {
         public event Action OnGameStart;
         public event Action OnGameOver;
@@ -13,26 +13,21 @@ namespace Level
         private readonly ILevelModel _levelModel;
         private readonly IEnemyModel _enemyModel;
         private readonly IPlayerModel _playerModel;
-        // private readonly IEnemyController _enemyController;
         private readonly ILevelConfigProvider _levelConfigProvider;
 
-        public GameController(ILevelModel levelModel,
+        public LevelController(ILevelModel levelModel,
                                 IEnemyModel enemyModel,
                                 IPlayerModel playerModel,
-                                // IEnemyController enemyController,
                                 ILevelConfigProvider levelConfigProvider)
-                                
         {
             _levelModel = levelModel;
             _enemyModel = enemyModel;
             _playerModel = playerModel;
-            // _enemyController = enemyController;
             _levelConfigProvider = levelConfigProvider;
             
-            // _enemyController.OnEnemyDamage += EnemyDamage;
+            _enemyModel.OnLifeChange += EnemyLifeChange;
             _enemyModel.OnDied += Victory;
             _playerModel.OnDied += Defeat;
-            
         }
 
         public void StartGame()
@@ -52,10 +47,11 @@ namespace Level
             OnLevelStart?.Invoke();
         }
 
-        // private void EnemyDamage()
-        // {
-        //     _levelModel.PrepareEquation();
-        // }
+        private void EnemyLifeChange(int lives)
+        {
+            if (_enemyModel.IsAlive())
+                _levelModel.PrepareEquation();
+        }
 
         private void Victory()
         {

@@ -538,6 +538,9 @@
               <e p="EnemyController.cs" t="Include" />
               <e p="EnemyFactory.cs" t="Include" />
             </e>
+            <e p="Enums" t="Include">
+              <e p="EEnemyType.cs" t="Include" />
+            </e>
             <e p="Installers" t="Include">
               <e p="EnemyInstaller.cs" t="Include" />
             </e>
@@ -545,9 +548,13 @@
               <e p="IEnemyController.cs" t="Include" />
               <e p="IEnemyFactory.cs" t="Include" />
               <e p="IEnemyModel.cs" t="Include" />
+              <e p="IEnemyView.cs" t="Include" />
             </e>
             <e p="Models" t="Include">
               <e p="EnemyModel.cs" t="Include" />
+            </e>
+            <e p="Views" t="Include">
+              <e p="EnemyView.cs" t="Include" />
             </e>
           </e>
           <e p="Helpers" t="Include">
@@ -578,9 +585,9 @@
           </e>
           <e p="Level" t="Include">
             <e p="Controllers" t="Include">
-              <e p="GameController.cs" t="Include" />
               <e p="GameLauncher.cs" t="Include" />
               <e p="LevelConfigProvider.cs" t="Include" />
+              <e p="LevelController.cs" t="Include" />
               <e p="TurnController.cs" t="Include" />
             </e>
             <e p="Data" t="Include">
@@ -594,9 +601,9 @@
               <e p="LevelInstaller.cs" t="Include" />
             </e>
             <e p="Interfaces" t="Include">
-              <e p="IGameController.cs" t="Include" />
               <e p="IGameLauncher.cs" t="Include" />
               <e p="ILevelConfigProvider.cs" t="Include" />
+              <e p="ILevelController.cs" t="Include" />
               <e p="ILevelModel.cs" t="Include" />
               <e p="ITurnController.cs" t="Include" />
             </e>
@@ -662,6 +669,7 @@
               <e p="BattleWindowView.cs" t="Include" />
               <e p="ChapterWindowView.cs" t="Include" />
               <e p="DefeatWindowView.cs" t="Include" />
+              <e p="EnemyBarView.cs" t="Include" />
               <e p="EquationView.cs" t="Include" />
               <e p="PauseWindowView.cs" t="Include" />
               <e p="PlayerHpView.cs" t="Include" />

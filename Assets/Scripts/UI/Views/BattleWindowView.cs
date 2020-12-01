@@ -11,6 +11,7 @@ namespace UI
         public List<IPlayerLifeView> Lives => _playerHp.Lives;
         public List<IResultButtonView> ResultButtons => _resultGroupView.Results;
 
+        [SerializeField] private EnemyBarView _enemyBar;
         [SerializeField] private PlayerHpView _playerHp;
         [SerializeField] private EquationView _equationView;
         [SerializeField] private ResultGroupView _resultGroupView;
@@ -22,7 +23,7 @@ namespace UI
 
         public void AddLife(IPlayerLifeView lifeView) => _playerHp.AddLife(lifeView);
         public void AddResultButton(IResultButtonView buttonView) => _resultGroupView.AddResultButton(buttonView);
-        public void SetResults(HashSet<int> results) => _resultGroupView.SetResults(results);
+        public void SetResults(IEnumerable<int> results) => _resultGroupView.SetResults(results);
 
         public void SetLives(int total, int current) => _playerHp.SetLives(total, current);
         
@@ -30,6 +31,10 @@ namespace UI
         {
             _equationView.SetEquation(operand1, operand2, operationType);
         }
+
+        public void SetEnemyLives(int current, int total) => _enemyBar.SetLifeHp(current, total);
+
+        public void ShowTimer(bool show) => _enemyBar.ShowTimer(show);
 
         // settings button 
 

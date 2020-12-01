@@ -35,9 +35,9 @@ namespace Operations
             }
         }
 
-        public HashSet<int> GetWrongResults(int operand1, int operand2, int wrongResultDelta, EOperationType operationType, int numberOfResults)
+        public List<int> GetWrongResults(int operand1, int operand2, int wrongResultDelta, EOperationType operationType, int numberOfResults)
         {
-            var results = new HashSet<int>();
+            var results = new List<int>();
 
             if (numberOfResults <= 0)
                 return results;

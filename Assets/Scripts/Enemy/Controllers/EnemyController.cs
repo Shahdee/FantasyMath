@@ -6,17 +6,17 @@ namespace Enemy
 {
     public class EnemyController : IEnemyController, IDisposable
     {
-        public event Action OnEnemyDamage;
-        
         private readonly IEnemyModel _enemyModel;
         private readonly ILevelModel _levelModel;
-        private readonly IGameController _gameController;
+        private readonly ILevelController _gameController;
         private readonly ILevelConfigProvider _levelConfigProvider;
         private readonly IEnemyFactory _enemyFactory;
 
+        private IEnemyView _enemyView;
+
         public EnemyController(IEnemyModel enemyModel, 
                             ILevelModel levelModel,
-                            IGameController gameController,
+                            ILevelController gameController,
                             ILevelConfigProvider levelConfigProvider,
                             IEnemyFactory enemyFactory)
         {
@@ -33,14 +33,14 @@ namespace Enemy
         {
             Debug.Log("enemy receives damage " + damage);
             _enemyModel.AddLives(-damage);
-
-            OnEnemyDamage?.Invoke();
         }
 
         private void LevelStart()
         {
             var lives = _levelConfigProvider.GetEnemyLives();
             _enemyModel.SetLives(lives);
+
+            _levelModel.IsBossLevel();
         }
 
         public void Dispose()

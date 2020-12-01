@@ -9,6 +9,6 @@ namespace Operations
 
         int GetCorrectResult(int operand1, int operand2, EOperationType operationType);
         
-        HashSet<int> GetWrongResults(int operand1, int operand2, int wrongResultDelta, EOperationType operationType, int numberOfResults);
+        List<int> GetWrongResults(int operand1, int operand2, int wrongResultDelta, EOperationType operationType, int numberOfResults);
     }
 }

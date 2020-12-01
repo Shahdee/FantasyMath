@@ -25,7 +25,7 @@ namespace UI
 
         public void OpenWindowAndCloseOthers(EWindowType windowType)
         {
-            Debug.LogError("ow and close others " + windowType);
+            // Debug.LogError("ow and close others " + windowType);
             
             while (_windowStack.Count > 0)
             {
@@ -37,7 +37,7 @@ namespace UI
         
         public void OpenWindow(EWindowType windowType)
         {
-            Debug.LogError("ow " + windowType);
+            // Debug.LogError("ow " + windowType);
             
             var window = _windows.FirstOrDefault(w => w.WindowType == windowType);
             if (window != null)

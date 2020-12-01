@@ -7,7 +7,7 @@ namespace Level
 
         public override void InstallBindings()
         {
-            Container.BindInterfacesTo<GameController>().AsSingle();
+            Container.BindInterfacesTo<LevelController>().AsSingle();
             Container.BindInterfacesTo<TurnController>().AsSingle();
             Container.BindInterfacesTo<LevelModel>().AsSingle();
             Container.BindInterfacesTo<GameLauncher>().AsSingle();
