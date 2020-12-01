@@ -28,3 +28,5 @@ MonoBehaviour:
     type: 3}
   _resultButton: {fileID: 1098164769978134845, guid: 1ed1c4426db354a9f97c6ffa1785fa6d,
     type: 3}
+  _screenBlockerView: {fileID: 7375183031529129860, guid: 010bf35269a184c138d89225f9108800,
+    type: 3}

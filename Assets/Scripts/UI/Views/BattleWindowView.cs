@@ -26,10 +26,11 @@ namespace UI
         public void AddResultButton(IResultButtonView buttonView) => _resultGroupView.AddResultButton(buttonView);
         public void SetResults(IEnumerable<int> results) => _resultGroupView.SetResults(results);
 
+        public void HighlighResult(int correctIndex) => _resultGroupView.HighlighResult(correctIndex);
         public void HighlighResults(int correctIndex, int wrongIndex) => _resultGroupView.HighlighResults(correctIndex, wrongIndex);
         public int GetResultIndex(int result) => _resultGroupView.GetResultIndex(result);
 
-        public void ResetHighlight() => _resultGroupView.ResetHighlight();
+        public void ResetButtons() => _resultGroupView.ResetButtons();
 
         public void SetLives(int total, int current) => _playerHp.SetLives(total, current);
         

@@ -16,5 +16,6 @@ namespace UI
         void Show(bool show);
         void SetHighlight(EResultHighlightType highlightType);
         void ResetHighlight();
+        void SetInteraction(bool interact);
     }
 }

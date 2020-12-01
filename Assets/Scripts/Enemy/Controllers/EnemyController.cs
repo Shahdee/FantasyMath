@@ -1,6 +1,5 @@
 using System;
 using Level;
-using UnityEngine;
 
 namespace Enemy
 {

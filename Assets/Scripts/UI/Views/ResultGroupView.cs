@@ -49,31 +49,43 @@ namespace UI
         {
             return _resultButtons.FindIndex(r => r.Result.Equals(result.ToString()));
         }
+        
+        public void HighlighResult(int correctIndex)
+        {
+            if (correctIndex >= 0 || correctIndex < _resultButtons.Count)
+                _resultButtons[correctIndex].SetHighlight(EResultHighlightType.Correct);
+
+            StartCoroutine(RestoreButtons());
+        }
 
         public void HighlighResults(int correctIndex, int wrongIndex)
         {
-            if (correctIndex < 0 || correctIndex >= _resultButtons.Count)
-                return;
+            if (correctIndex >= 0 || correctIndex < _resultButtons.Count)
+                _resultButtons[correctIndex].SetHighlight(EResultHighlightType.Correct);
             
-            if (wrongIndex < 0 || wrongIndex >= _resultButtons.Count)
-                return;
-            
-            _resultButtons[correctIndex].SetHighlight(EResultHighlightType.Correct);
-            _resultButtons[wrongIndex].SetHighlight(EResultHighlightType.Wrong);
+            if (wrongIndex >= 0 || wrongIndex < _resultButtons.Count)
+                _resultButtons[wrongIndex].SetHighlight(EResultHighlightType.Wrong);
 
-            StartCoroutine(RestoreHightlight());
+            foreach (var button in _resultButtons)
+                button.SetInteraction(false);
+
+            StartCoroutine(RestoreButtons());
         }
         
-        private IEnumerator RestoreHightlight()
+        private IEnumerator RestoreButtons()
         {
             yield return new WaitForSeconds(HighlightTime);
-            ResetHighlight();
+
+            ResetButtons();
         }
 
-        public void ResetHighlight()
+        public void ResetButtons()
         {
             for (int i = 0; i < _resultButtons.Count; i++)
+            {
                 _resultButtons[i].ResetHighlight();
+                _resultButtons[i].SetInteraction(true);
+            }
         }
 
         private void ResultButtonClick(IResultButtonView view, string text)

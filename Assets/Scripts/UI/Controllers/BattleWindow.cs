@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Linq;
 using Enemy;
 using Helpers;
@@ -12,6 +13,8 @@ namespace UI
     public class BattleWindow : AbstractWindow, IUpdatable, IDisposable
     {
         public override EWindowType WindowType => EWindowType.Battle;
+
+        private const float NextEquationTime = 2f;
         
         private readonly ILevelController _gameController;
         private readonly ITurnController _turnController;
@@ -22,6 +25,8 @@ namespace UI
         private readonly ILevelModel _levelModel;
         private readonly IOperationProvider _operationProvider;
         private readonly IResultButtonFactory _resultButtonFactory;
+        private readonly ICoroutineManager _coroutineManager;
+        private readonly IScreenBlocker _screenBlocker;
         private readonly IEnemyModel _enemyModel;
 
         public BattleWindow(LazyInject<BattleWindowView> view,
@@ -30,6 +35,8 @@ namespace UI
                             ILevelModel levelModel,
                             IOperationProvider operationProvider,
                             IResultButtonFactory resultButtonFactory,
+                            ICoroutineManager coroutineManager,
+                            IScreenBlocker screenBlocker,
                             IEnemyModel enemyModel,
                             ILevelController gameController,
                             ITurnController turnController)
@@ -42,21 +49,20 @@ namespace UI
             _levelModel = levelModel;
             _operationProvider = operationProvider;
             _resultButtonFactory = resultButtonFactory;
+            _coroutineManager = coroutineManager;
+            _screenBlocker = screenBlocker;
             _enemyModel = enemyModel;
 
             _gameController.OnLevelStart += LevelStart;
             _playerModel.OnLifeChange += PlayerLifeChange;
             _enemyModel.OnLifeChange += EnemyLifeChange;
-            _levelModel.OnEquationPrepared += UpdateEquation;
-            // _levelModel.OnLevelTimeElapsed += 
+            _levelModel.OnEquationPrepared += ShowNextEquation;
         }
 
         protected override void OnAssignView() => SetView(_view.Value);
         
         protected override void OnAfterShow()
         {
-            // ev + 
-
             _view.Value.OnResultSelect += ResultSelected;
 
             UpdateView();
@@ -64,8 +70,6 @@ namespace UI
 
         protected override void OnAfterHide()
         {
-            // ev -
-            
             _view.Value.OnResultSelect -= ResultSelected;
         }
 
@@ -125,6 +129,18 @@ namespace UI
             _view.Value.SetEnemyLives(lives, total);
         }
 
+        private void ShowNextEquation()
+        {
+            _coroutineManager.StartCoroutine(ShowEquationWIthDelay());
+        }
+
+        private IEnumerator ShowEquationWIthDelay()
+        {
+            yield return new WaitForSeconds(NextEquationTime);
+            
+            UpdateEquation();
+        }
+
         private void UpdateEquation()
         {
             _view.Value.SetEquation(_levelModel.FirstOperand, _levelModel.SecondOperand, _levelModel.OperationType);
@@ -144,6 +160,7 @@ namespace UI
                 _view.Value.AddResultButton(button);
             }
             
+            _view.Value.ResetButtons();
             _view.Value.SetResults(results);
         }
 
@@ -165,9 +182,13 @@ namespace UI
 
             var correctResult =_operationProvider.GetCorrectResult(operand1, operand2, operationType);
             var correct =_operationProvider.CheckOperation(operand1, operand2, operationType, result);
-            var correctIndex = _view.Value.GetResultIndex(correctResult);
-            
-            _view.Value.HighlighResults(correctIndex, resultIndex);
+            if (correct)
+                _view.Value.HighlighResult(resultIndex);
+            else
+            {
+                var correctIndex = _view.Value.GetResultIndex(correctResult);
+                _view.Value.HighlighResults(correctIndex, resultIndex);
+            }
             
             _turnController.SendResults(result);
         }

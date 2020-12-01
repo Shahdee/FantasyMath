@@ -15,12 +15,14 @@ namespace UI
         
         [SerializeField] private PlayerLifeView _playerLife;
         [SerializeField] private ResultButtonView _resultButton;
+        [SerializeField] private ScreenBlockerView _screenBlockerView;
 
         public override void InstallBindings()
         {
             Container.BindInstance(_playerLife);
             Container.BindInstance(_resultButton);
             
+            Container.Bind<ScreenBlockerView>().FromComponentInNewPrefab(_screenBlockerView).AsSingle();
             Container.Bind<StartWindowView>().FromComponentInNewPrefab(_startWindowView).AsSingle();
             Container.Bind<BattleWindowView>().FromComponentInNewPrefab(_battleWindowView).AsSingle();
             Container.Bind<DefeatWindowView>().FromComponentInNewPrefab(_defeatWindowView).AsSingle();
@@ -31,6 +33,7 @@ namespace UI
             Container.BindInterfacesTo<WindowHandler>().AsSingle().NonLazy();
             
             Container.BindInterfacesTo<WindowController>().AsSingle();
+            Container.BindInterfacesTo<ScreenBlocker>().AsSingle();
             Container.BindInterfacesTo<StartWindow>().AsSingle();
             Container.BindInterfacesTo<BattleWindow>().AsSingle();
             Container.BindInterfacesTo<DefeatWindow>().AsSingle();
