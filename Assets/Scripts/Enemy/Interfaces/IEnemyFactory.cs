@@ -2,6 +2,6 @@ namespace Enemy
 {
     public interface IEnemyFactory
     {
-        // IEnemyView CreateEnemy();
+        IEnemyView CreateEnemy(bool boss);
     }
 }

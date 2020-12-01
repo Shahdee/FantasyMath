@@ -671,6 +671,7 @@
               <e p="DefeatWindowView.cs" t="Include" />
               <e p="EnemyBarView.cs" t="Include" />
               <e p="EquationView.cs" t="Include" />
+              <e p="LevelInfoView.cs" t="Include" />
               <e p="PauseWindowView.cs" t="Include" />
               <e p="PlayerHpView.cs" t="Include" />
               <e p="PlayerLifeView.cs" t="Include" />

@@ -11,6 +11,7 @@ namespace UI
         public List<IPlayerLifeView> Lives => _playerHp.Lives;
         public List<IResultButtonView> ResultButtons => _resultGroupView.Results;
 
+        [SerializeField] private LevelInfoView _levelInfo;
         [SerializeField] private EnemyBarView _enemyBar;
         [SerializeField] private PlayerHpView _playerHp;
         [SerializeField] private EquationView _equationView;
@@ -35,6 +36,8 @@ namespace UI
         public void SetEnemyLives(int current, int total) => _enemyBar.SetLifeHp(current, total);
 
         public void ShowTimer(bool show) => _enemyBar.ShowTimer(show);
+
+        public void SetLevelInfo(int chapter, int level) => _levelInfo.SetLevelInfo(chapter, level);
 
         // settings button 
 

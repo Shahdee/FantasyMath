@@ -66,7 +66,8 @@ namespace UI
         private void LevelStart()
         {
             if (!_view.HasValue) return;
-            
+
+            UpdateLevelInfo();
             UpdateEnemyBar();
             UpdateEquation();
         }
@@ -95,6 +96,8 @@ namespace UI
             
             _view.Value.SetLives(totalPlayerLives, lives);
         }
+
+        private void UpdateLevelInfo() => _view.Value.SetLevelInfo(_levelModel.CurrentChapter + 1, _levelModel.CurrentLevelInChapter + 1);
 
         private void UpdateEnemyBar()
         {

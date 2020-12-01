@@ -41,6 +41,16 @@ namespace Enemy
             _enemyModel.SetLives(lives);
 
             _levelModel.IsBossLevel();
+            
+            CreateEnemy();
+        }
+
+        private void CreateEnemy()
+        {
+            if (_enemyView != null)
+                _enemyView.DestroyEnemy();
+
+            _enemyView = _enemyFactory.CreateEnemy(_levelModel.IsBossLevel());
         }
 
         public void Dispose()
