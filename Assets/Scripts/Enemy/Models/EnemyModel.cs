@@ -6,6 +6,7 @@ namespace Enemy
     {
         public event Action OnDied;
         public event Action<int> OnLifeChange;
+        public event Action<int> OnLifeRestore;
         public int Lives => _lives;
         public int TotalLives => _totalLives;
 
@@ -21,7 +22,7 @@ namespace Enemy
         {
             _totalLives = _lives = lives;
             
-            OnLifeChange?.Invoke(_lives);
+            OnLifeRestore?.Invoke(_lives);
         }
 
         public void AddLives(int lives)

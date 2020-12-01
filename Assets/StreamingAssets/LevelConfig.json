@@ -6,8 +6,8 @@
       "_randomNumberDelta": 2,
       "_wrongResultDelta": 3,
       "_totalNumberOfResults": 4,
-      "_levels": 1,
-      "_bossTimeLimitSec": 10
+      "_levels": 5,
+      "_bossTimeLimitSec": 45
     },
   
     "_playerLives": 3,
