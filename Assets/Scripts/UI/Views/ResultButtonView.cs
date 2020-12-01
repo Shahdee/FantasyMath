@@ -11,6 +11,10 @@ namespace UI
         [SerializeField] private Button _button;
         [SerializeField] private Text _btnText;
         [SerializeField] private Image _bg;
+        
+        [SerializeField] private Color _red;
+        [SerializeField] private Color _green;
+        [SerializeField] private Color _white;
 
         private void Awake()
         {
@@ -39,15 +43,15 @@ namespace UI
             switch (highlightType)
             {
                 case EResultHighlightType.Neutral:
-                    _bg.color = Color.white;
+                    _bg.color = _white;
                     break;
                 
                 case EResultHighlightType.Correct:
-                    _bg.color = Color.green;
+                    _bg.color = _green;
                     break;
                 
                 case EResultHighlightType.Wrong:
-                    _bg.color = Color.red;
+                    _bg.color = _red;
                     break;
             }
         }
