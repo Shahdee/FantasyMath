@@ -3,6 +3,7 @@ using System.Linq;
 using Enemy;
 using Helpers;
 using Level;
+using Operations;
 using UnityEngine;
 using Zenject;
 
@@ -19,6 +20,7 @@ namespace UI
         private readonly IPlayerLifeFactory _playerLifeFactory;
         private readonly IPlayerModel _playerModel;
         private readonly ILevelModel _levelModel;
+        private readonly IOperationProvider _operationProvider;
         private readonly IResultButtonFactory _resultButtonFactory;
         private readonly IEnemyModel _enemyModel;
 
@@ -26,6 +28,7 @@ namespace UI
                             IPlayerLifeFactory playerLifeFactory,
                             IPlayerModel playerModel,
                             ILevelModel levelModel,
+                            IOperationProvider operationProvider,
                             IResultButtonFactory resultButtonFactory,
                             IEnemyModel enemyModel,
                             ILevelController gameController,
@@ -37,6 +40,7 @@ namespace UI
             _playerLifeFactory = playerLifeFactory;
             _playerModel = playerModel;
             _levelModel = levelModel;
+            _operationProvider = operationProvider;
             _resultButtonFactory = resultButtonFactory;
             _enemyModel = enemyModel;
 
@@ -153,8 +157,18 @@ namespace UI
             UpdateEnemyHealth();
         }
 
-        private void ResultSelected(int result)
+        private void ResultSelected(int resultIndex, int result)
         {
+            var operand1 = _levelModel.FirstOperand;
+            var operand2 = _levelModel.SecondOperand;
+            var operationType = _levelModel.OperationType;
+
+            var correctResult =_operationProvider.GetCorrectResult(operand1, operand2, operationType);
+            var correct =_operationProvider.CheckOperation(operand1, operand2, operationType, result);
+            var correctIndex = _view.Value.GetResultIndex(correctResult);
+            
+            _view.Value.HighlighResults(correctIndex, resultIndex);
+            
             _turnController.SendResults(result);
         }
 

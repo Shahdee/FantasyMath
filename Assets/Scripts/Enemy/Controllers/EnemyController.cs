@@ -32,7 +32,6 @@ namespace Enemy
 
         public void ReceiveDamage(int damage)
         {
-            Debug.Log("enemy receives damage " + damage);
             _enemyModel.AddLives(-damage);
         }
 

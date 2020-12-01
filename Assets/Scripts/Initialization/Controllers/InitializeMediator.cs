@@ -22,8 +22,6 @@ namespace Initialization
         
         public void Initialize()
         {
-            Debug.LogError("init here " + _configInitializables.Count);
-            
             _waiting = _configInitializables.Count;
             
             foreach (var configInitializable in _configInitializables)

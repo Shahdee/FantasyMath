@@ -7,7 +7,7 @@ namespace UI
 {
     public class BattleWindowView : AbstractWindowView
     {
-        public event Action<int> OnResultSelect;
+        public event Action<int, int> OnResultSelect;
         public List<IPlayerLifeView> Lives => _playerHp.Lives;
         public List<IResultButtonView> ResultButtons => _resultGroupView.Results;
 
@@ -19,12 +19,17 @@ namespace UI
 
         private void Awake()
         {
-            _resultGroupView.OnResultSelect += (result)=> {OnResultSelect?.Invoke(result);};
+            _resultGroupView.OnResultSelect += (resultIndex, result)=> {OnResultSelect?.Invoke(resultIndex, result);};
         }
 
         public void AddLife(IPlayerLifeView lifeView) => _playerHp.AddLife(lifeView);
         public void AddResultButton(IResultButtonView buttonView) => _resultGroupView.AddResultButton(buttonView);
         public void SetResults(IEnumerable<int> results) => _resultGroupView.SetResults(results);
+
+        public void HighlighResults(int correctIndex, int wrongIndex) => _resultGroupView.HighlighResults(correctIndex, wrongIndex);
+        public int GetResultIndex(int result) => _resultGroupView.GetResultIndex(result);
+
+        public void ResetHighlight() => _resultGroupView.ResetHighlight();
 
         public void SetLives(int total, int current) => _playerHp.SetLives(total, current);
         
