@@ -56,7 +56,7 @@ namespace UI
             }
         }
 
-        public void ResetHighlight() => _bg.color = Color.white;
+        public void ResetHighlight() => _bg.color = _white;
         public void SetInteraction(bool interact) => _button.interactable = interact;
     }
 }
