@@ -77,15 +77,14 @@ namespace UI
         {
             if (!_view.HasValue) return;
 
-            UpdateLevelInfo();
-            UpdateEnemyBar();
-            UpdateEquation();
+            UpdateView();
         }
 
         private void UpdateView()
         {
             if (!_view.HasValue) return;
-
+            
+            UpdateLevelInfo();
             UpdatePlayerLives();
             UpdateEnemyBar();
             UpdateEquation();
