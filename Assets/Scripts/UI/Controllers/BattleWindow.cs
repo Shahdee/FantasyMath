@@ -1,13 +1,14 @@
 using System;
 using System.Linq;
 using Enemy;
+using Helpers;
 using Level;
 using UnityEngine;
 using Zenject;
 
 namespace UI
 {
-    public class BattleWindow : AbstractWindow, IDisposable
+    public class BattleWindow : AbstractWindow, IUpdatable, IDisposable
     {
         public override EWindowType WindowType => EWindowType.Battle;
         
@@ -43,6 +44,7 @@ namespace UI
             _playerModel.OnLifeChange += PlayerLifeChange;
             _enemyModel.OnLifeChange += EnemyLifeChange;
             _levelModel.OnEquationPrepared += UpdateEquation;
+            // _levelModel.OnLevelTimeElapsed += 
         }
 
         protected override void OnAssignView() => SetView(_view.Value);
@@ -159,6 +161,14 @@ namespace UI
         public void Dispose()
         {
             _gameController.OnLevelStart -= LevelStart;
+        }
+
+        public void CustomUpdate(float deltaTime)
+        {
+            if (!_view.HasValue)
+                return;
+
+            _view.Value.SetTime(_levelModel.TimeLeft, _levelModel.TotalTime);
         }
     }
 }

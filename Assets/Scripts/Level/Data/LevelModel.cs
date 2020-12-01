@@ -1,7 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Helpers;
 using Operations;
 using Operations.Enums;
 using UnityEngine;
@@ -9,9 +9,10 @@ using Random = UnityEngine.Random;
 
 namespace Level
 {
-    public class LevelModel : ILevelModel
+    public class LevelModel : ILevelModel, IUpdatable
     {
         public event Action OnEquationPrepared;
+        public event Action OnLevelTimeElapsed;
         
         private readonly IOperationProvider _operationProvider;
         public int CurrentChapter => _currentChapter;
@@ -20,7 +21,9 @@ namespace Level
         public int SecondOperand => _secondOperand;
         public EOperationType OperationType => _currentOperatiom;
         public IEnumerable<int> Results => _results;
-        
+
+        public float TotalTime => _totalTime;
+        public float TimeLeft => _timeLeft;
 
         private readonly LevelData _levelData;
         
@@ -35,6 +38,10 @@ namespace Level
         private int _secondOperand = -1;
         private int _operationResult = -1;
         private IEnumerable<int> _results;
+
+        private bool _updateTimer;
+        private float _totalTime;
+        private float _timeLeft;
         
         private EOperationType _currentOperatiom = EOperationType.Summ;
 
@@ -60,6 +67,9 @@ namespace Level
             
             _currentLevel = level;
             UpdateOperation();
+
+            if (IsBossLevel())
+                SetTimer();
         }
 
         public bool IsBossLevel()
@@ -73,6 +83,13 @@ namespace Level
         {
             UpdateOperation();
             OnEquationPrepared?.Invoke();
+        }
+
+        private void SetTimer()
+        {
+            _updateTimer = true;
+            _totalTime = _configChapterData.BossTimeLimitSec;
+            _timeLeft = _totalTime;
         }
 
         private void UpdateOperationBase()
@@ -98,6 +115,20 @@ namespace Level
                                                             _configChapterData.TotalNumberOfResults - 1);
             results.Add(_operationResult);
             _results = results.OrderBy(r => Random.value);
+        }
+
+        public void CustomUpdate(float deltaTime)
+        {
+            if (!_updateTimer)
+                return;
+
+            _timeLeft -= deltaTime;
+
+            if (_timeLeft <= 0)
+            {
+                _updateTimer = false;
+                OnLevelTimeElapsed?.Invoke();
+            }
         }
     }
 }

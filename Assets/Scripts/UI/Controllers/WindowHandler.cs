@@ -15,6 +15,7 @@ namespace UI
             _windowController = windowController;
             
             _gameController.OnGameStart += () => _windowController.OpenWindowAndCloseOthers(EWindowType.Battle);
+            _gameController.OnGameRelaunch += () => _windowController.OpenWindowAndCloseOthers(EWindowType.Start);
             _gameController.OnGameOver += () => _windowController.OpenWindow(EWindowType.Defeat);
         }
     }

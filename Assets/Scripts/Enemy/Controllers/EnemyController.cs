@@ -26,6 +26,7 @@ namespace Enemy
             _levelConfigProvider = levelConfigProvider;
             _enemyFactory = enemyFactory;
 
+            _gameController.OnGameRelaunch += GameRelaunch;
             _gameController.OnLevelStart += LevelStart;
         }
 
@@ -33,6 +34,11 @@ namespace Enemy
         {
             Debug.Log("enemy receives damage " + damage);
             _enemyModel.AddLives(-damage);
+        }
+
+        private void GameRelaunch()
+        {
+            RemoveEnemy();
         }
 
         private void LevelStart()
@@ -47,14 +53,22 @@ namespace Enemy
 
         private void CreateEnemy()
         {
-            if (_enemyView != null)
-                _enemyView.DestroyEnemy();
-
+            RemoveEnemy();
             _enemyView = _enemyFactory.CreateEnemy(_levelModel.IsBossLevel());
+        }
+
+        private void RemoveEnemy()
+        {
+            if (_enemyView != null)
+            {
+                _enemyView.DestroyEnemy();
+                _enemyView = null;
+            }
         }
 
         public void Dispose()
         {
+            _gameController.OnGameRelaunch -= GameRelaunch;
             _gameController.OnLevelStart -= LevelStart;
         }
     }

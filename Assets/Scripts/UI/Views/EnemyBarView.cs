@@ -19,9 +19,10 @@ namespace UI
             _lifeBar.fillAmount = (float)value / maxValue;
         } 
         
-        public void SetTimeBar(int value, int maxValue)
+        public void SetTime(float current, float total)
         {
-            _timerBar.fillAmount = (float)value / maxValue;
+            _timeLeft.text = ((int)current).ToString();
+            _timerBar.fillAmount = current / total;
         }
 
         public void ShowTimer(bool show)

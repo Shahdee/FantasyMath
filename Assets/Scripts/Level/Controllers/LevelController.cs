@@ -6,6 +6,7 @@ namespace Level
     public class LevelController : ILevelController
     {
         public event Action OnGameStart;
+        public event Action OnGameRelaunch;
         public event Action OnGameOver;
         public event Action OnLevelStart;
         public event Action OnChapterComplete;
@@ -28,6 +29,14 @@ namespace Level
             _enemyModel.OnLifeChange += EnemyLifeChange;
             _enemyModel.OnDied += Victory;
             _playerModel.OnDied += Defeat;
+            _levelModel.OnLevelTimeElapsed += LevelTimeElapsed;
+        }
+
+        public void RelaunchGame()
+        {
+            // perhaps reset states
+            
+            OnGameRelaunch?.Invoke();
         }
 
         public void StartGame()
@@ -51,6 +60,11 @@ namespace Level
         {
             if (_enemyModel.IsAlive())
                 _levelModel.PrepareEquation();
+        }
+
+        private void LevelTimeElapsed()
+        {
+            Defeat();
         }
 
         private void Victory()

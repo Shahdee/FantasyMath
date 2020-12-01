@@ -36,6 +36,7 @@ namespace UI
         public void SetEnemyLives(int current, int total) => _enemyBar.SetLifeHp(current, total);
 
         public void ShowTimer(bool show) => _enemyBar.ShowTimer(show);
+        public void SetTime(float current, float total) => _enemyBar.SetTime(current, total);
 
         public void SetLevelInfo(int chapter, int level) => _levelInfo.SetLevelInfo(chapter, level);
 

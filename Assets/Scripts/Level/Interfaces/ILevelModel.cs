@@ -7,6 +7,7 @@ namespace Level
     public interface ILevelModel
     {
         event Action OnEquationPrepared;
+        event Action OnLevelTimeElapsed;
         
         int CurrentChapter { get; }
         int CurrentLevelInChapter { get; }
@@ -14,6 +15,8 @@ namespace Level
         int SecondOperand { get; }
         EOperationType OperationType { get; }
         IEnumerable<int> Results { get; }
+        float TotalTime { get; }
+        float TimeLeft { get; }
 
         void SetChapterData(LevelConfigChapterData configChapterData);
 
