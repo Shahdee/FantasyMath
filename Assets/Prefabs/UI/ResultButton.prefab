@@ -289,6 +289,9 @@ MonoBehaviour:
   _button: {fileID: 4794286676957627201}
   _btnText: {fileID: 5807401900870063142}
   _bg: {fileID: 1979890938913485819}
+  _red: {r: 0.6313726, g: 0.007843138, b: 0.007843138, a: 0}
+  _green: {r: 0.08627451, g: 0.36078432, b: 0, a: 0}
+  _white: {r: 1, g: 1, b: 1, a: 0}
 --- !u!114 &4375376917593817666
 MonoBehaviour:
   m_ObjectHideFlags: 0
